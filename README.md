@@ -13,7 +13,7 @@ git clone https://github.com/bioinfo-ibms-pumc/MethyScan.git
 ```
 pip3 install biopython matplotlib primer3-py
 ```
-[Bowtie](http://bowtie-bio.sourceforge.net/index.shtml), [BEDTools](https://bedtools.readthedocs.io/en/latest/), [Samtools](http://samtools.sourceforge.net/)
+  MethyScan also needs other NGS softwares: [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml), [BEDTools](https://bedtools.readthedocs.io/en/latest/), [Samtools](http://samtools.sourceforge.net/)
 
 
 ## Command Lines
