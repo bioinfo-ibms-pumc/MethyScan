@@ -98,7 +98,7 @@ optional arguments:
    python3 MethyScan.py designprimer -i tfpi2.fa -o mytest
    
 2. Genome sequence conversion and indexing.
-   python3 MethyScan.py formatdb -i tfpi2.fa -o mydb
+   python3 MethyScan.py formatdb -i Homo_sapiens_assembly38.fasta -o mydb
 
 3. Search primer pairs against methylated genome sequences.
-   python3 MethyScan.py searchdb -i mytest.fa -d mydb -t 10 -o mytest2 -k ALL
+   python3 MethyScan.py searchdb -i mytest.fa -d mydb -t 10 -o primer_res.txt -k ALL
