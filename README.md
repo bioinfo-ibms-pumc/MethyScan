@@ -1,6 +1,6 @@
 # MethyScan: A tool for methylation specific PCR primer design and evaluation
 
-MethyScan can simultaneously complete the design of two MSP primers and the nested primer for increased sensitivity. In addition, by converting the genome sequence and integrating the next-generation sequencing tool [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml), MethyScan can evaluate the non-specific amplification information of the primers on the genome-scale. 
+MethyScan can simultaneously complete the design of two MSP primers and the nested primer for increased sensitivity. In addition, by converting the genome sequence and integrating the next-generation sequencing tool [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml), MethyScan can evaluate the non-specific amplification information of the primers on the genome sequence. 
 
 MethyScan is maintained by Yinghao Cao [yhcao@ibms.pumc.edu.cn].
 
