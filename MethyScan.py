@@ -1,8 +1,6 @@
 #########################################################################
 # File Name: MethyScan.py
 # > Author: CaoYinghao
-# > Mail: caoyinghao@gmail.com 
-# Created Time: Sat Oct 31 09:33:08 2020
 #########################################################################
 #! /usr/bin/python
 

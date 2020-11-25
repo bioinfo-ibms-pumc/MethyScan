@@ -1,8 +1,6 @@
 #########################################################################
 # File Name: formatdb.py
 # > Author: CaoYinghao
-# > Mail: caoyinghao@gmail.com 
-# Created Time: Sun Nov  1 12:18:17 2020
 #########################################################################
 #! /usr/bin/python
 

@@ -1,8 +1,6 @@
 #########################################################################
 # File Name: searchdb.py
 # > Author: CaoYinghao
-# > Mail: caoyinghao@gmail.com 
-# Created Time: Sun Nov  1 20:09:56 2020
 #########################################################################
 #! /usr/bin/python
 
