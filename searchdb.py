@@ -85,7 +85,7 @@ class Searcher(object):
                 slices = name.split("_")
                 name = slices[0] + "_" + slices[2] + "_" + slices[3]
             c += 1
-            print(len(res.split("\n")))
+            #print(len(res.split("\n")))
             tempn = 0
             for line in res.split("\n"):
                 tempn += 1
