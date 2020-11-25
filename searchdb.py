@@ -57,7 +57,7 @@ class Searcher(object):
 
     def alignment(self):
         self.checkdb()
-        #self.domainjob()
+        self.domainjob()
         self.plotPrimers()
 
     def plotPrimers(self):
