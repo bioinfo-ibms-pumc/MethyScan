@@ -33,7 +33,7 @@ class DBFormatter(object):
 
 
 	def convertSeq(self):
-		#self.translate()
+		self.translate()
 		self.indexdb()
 
 	def translate(self):
