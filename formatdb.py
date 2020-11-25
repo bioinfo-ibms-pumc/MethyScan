@@ -103,22 +103,26 @@ class DBFormatter(object):
 		now = datetime.now()
 		print("IndexDB start: " + ctime())
 		for i,t in enumerate(DBFormatter.TYPES):
+			if t in ["MCT","MGA","UCT"]:continue
 			print(str(i + 1) + "/" + str(len(DBFormatter.TYPES)) + " : " + self.oname + "." + t)
-			#cmd = "makeblastdb -in " + self.oname + "." + t + " -dbtype nucl"
 			cmd = "bowtie-build " + self.oname + "." + t + " --threads " + str(self.threads) + " " + self.oname + '.' + t
-			#cmd = "hisat2-build " + self.oname + "." + t + " -p " + str(self.threads) + " " + self.oname + "." + t
-			#print(cmd)
+			print(cmd)
 			res = subprocess.run(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8")
 			if res.returncode == 0:
-				print("Success hisat2:",self.oname + "." + t)
+				print("Success bowtie indexing:",self.oname + "." + t)
 			else:
-				print("Error hisat2:",self.oname + "." + t)
+				print("Error bowtie indexing:",self.oname + "." + t)
+				print(res.returncode)
+				exit()
 			cmd1 = "samtools faidx " + self.oname + "." + t 
-			res = subprocess.run(cmd1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8")
-			if res.returncode == 0:
-				print("Success index:",self.oname + "." + t)
+			print(cmd1)
+			res1 = subprocess.run(cmd1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8")
+			if res1.returncode != 0:
+				print("Success samtools index:",self.oname + "." + t)
 			else:
-				print("Error index:",self.oname + "." + t)
+				print("Error samtools index:",self.oname + "." + t)
+				print(res1.returncode)
+				exit()
 			now1 = datetime.now()
 			print("Cost time:" + str((now1-now).seconds) + " s")
 		now1 = datetime.now()
