@@ -112,8 +112,8 @@ class DBFormatter(object):
 				print("Success bowtie indexing:",self.oname + "." + t)
 			else:
 				print("Error bowtie indexing:",self.oname + "." + t)
-				print(res.returncode)
-				exit()
+				#print(res.returncode)
+				#exit()
 			cmd1 = "samtools faidx " + self.oname + "." + t 
 			print(cmd1)
 			res1 = subprocess.run(cmd1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8")
@@ -121,8 +121,8 @@ class DBFormatter(object):
 				print("Success samtools index:",self.oname + "." + t)
 			else:
 				print("Error samtools index:",self.oname + "." + t)
-				print(res1.returncode)
-				exit()
+				#print(res1.returncode)
+				#exit()
 			now1 = datetime.now()
 			print("Cost time:" + str((now1-now).seconds) + " s")
 		now1 = datetime.now()
