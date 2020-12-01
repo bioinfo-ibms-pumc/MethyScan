@@ -1,6 +1,8 @@
 #########################################################################
 # File Name: utils.py
 # > Author: CaoYinghao
+# > Mail: caoyinghao@gmail.com 
+# Created Time: Sat Oct 31 10:38:04 2020
 #########################################################################
 #! /usr/bin/python
 
@@ -123,6 +125,12 @@ class PrimerDesign(object):
             #exit()
             #for i in regionlocs:
             #cpglocs = regionlocs[-1]
+
+            if len(regionlocs) == 0:
+                print("No CpG islands found in " + gene.id)
+                regionlocs = [[1,len(usedstr)]]
+            else:
+                print(len(regionlocs),"CpG islands found in " + gene.id)
             for index,cpgloc in enumerate(regionlocs):
                 #if index != 1:continue
                 res,aseq,mseq,useq = self.calcu(usedstr,cpgloc)
@@ -323,7 +331,7 @@ class PrimerDesign(object):
         nestcandidates = self.refinenest(ucandidates,usedstr,locs)
         #print(nestcandidates['22_658_TGTTTTTTTTTTAGGAAATAAC|25_916_TCATTCATTATACTACAATCTAACA'])
         #print(nestcandidates)
-        #print(len(ucandidates),len(nestcandidates))
+        print("M,U,Nest:",len(candidates),len(ucandidates),len(nestcandidates))
         names = []
         dimer_hairpin = {}
         for i in ucandidates:
@@ -489,8 +497,10 @@ class PrimerDesign(object):
                     break
             for k in range(0,self.threshold.primermaxlen +1- rp[0]):
                 for j in range(0,self.threshold.primermaxlen +1- rp[0]):
+                    #print(rp[1], shiftloc,  j, len(rampseq),rp[0])
                     if rp[1] -shiftloc  + j < len(rampseq) and rp[1] -shiftloc + rp[0] + k < len(rampseq):
                         rs = rampseq[len(rampseq) - (rp[1] - shiftloc) - j :len(rampseq) - (rp[1] - shiftloc) + rp[0] + k]
+                        #print(s,rs)
                         if rs.find("T"*self.threshold.polyT) > -1:continue
                         temptm = PrimerDesign.tmvalue(rs)
                         if temptm > self.threshold.maxtm or temptm < self.threshold.mintm:continue
@@ -502,6 +512,7 @@ class PrimerDesign(object):
                 if tm1 != -1:
                     #print("UR",loc1,tm1,loclen1,rs)
                     break
+            #print(s,rs)
             if tm != -1 and tm1 != -1:
                 num += 1
                 ufp = (len(s),loc,s,len(s.split("CG"))-1,tm,int(GC(Seq(s))*100)/100)

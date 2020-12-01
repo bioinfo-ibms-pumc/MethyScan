@@ -1,6 +1,8 @@
 #########################################################################
 # File Name: searchdb.py
 # > Author: CaoYinghao
+# > Mail: caoyinghao@gmail.com 
+# Created Time: Sun Nov  1 20:09:56 2020
 #########################################################################
 #! /usr/bin/python
 
@@ -60,7 +62,8 @@ class Searcher(object):
 
     def plotPrimers(self):
         matplotlib.use('AGG')
-        plt.rcParams['font.family'] = u'Times New Roman'
+        plt.rcParams['font.family'] = 'serif'
+        plt.rcParams['font.serif']     = ['Times New Roman'] + plt.rcParams['font.serif']
         #fig = plt.figure(figsize=(6,6))
         strs = ""
         with open(self.ofile,"r") as infile:
@@ -130,9 +133,10 @@ class Searcher(object):
         plt.savefig("primer_res.pdf")
         
     def smallsort(self,x):
-        if x.find("_") > -1:
+        if x.find("_") > -1: #find("_") > -1:
             xs = x.split("_")
-            return [xs[1],xs[0],xs[-1]]
+            #return [xs[1],xs[0],xs[-1]]
+            return [xs[0],xs[1],xs[-1]]
         else:
             return x
 
