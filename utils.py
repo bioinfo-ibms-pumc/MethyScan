@@ -205,7 +205,7 @@ class PrimerDesign(object):
             else:
                 plt.savefig(gene.id + ".pdf")
         if outfile is not None:
-            out = open(outfile + ".fa","w")
+            out = open(outfile + ".txt","w")
             out.write(pseq)
             out.close()
             out = open(outfile + ".detail.txt","w")
