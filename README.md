@@ -101,4 +101,4 @@ optional arguments:
    python3 MethyScan.py formatdb -i Homo_sapiens_assembly38.fasta -o mydb
 
 3. Search primer pairs against methylated genome sequences.
-   python3 MethyScan.py searchdb -i mytest.fa -d mydb -t 10 -o primer_res.txt -k ALL
+   python3 MethyScan.py searchdb -i mytest.txt -d mydb -t 10 -o primer_res.txt -k ALL
