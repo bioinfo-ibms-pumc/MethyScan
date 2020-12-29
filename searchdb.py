@@ -130,7 +130,7 @@ class Searcher(object):
             start += 80
         ax.set_xlabel("Amplicon length",size=15)
         plt.subplots_adjust(left=0.3)
-        plt.savefig("primer_res.pdf")
+        plt.savefig(self.ofile + ".pdf")
         
     def smallsort(self,x):
         if x.find("_") > -1: #find("_") > -1:
@@ -234,7 +234,7 @@ UGA: Methylated genome with G converted to A.\n"""
                 if c > 1000:continue
             laststr += "#" * 100 + "\n"
         if self.ofile != "":
-            out = open(self.ofile,"w")
+            out = open(self.ofile + ".txt","w")
             out.write(laststr)
             out.close()
         else:
