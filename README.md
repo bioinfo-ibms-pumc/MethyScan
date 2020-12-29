@@ -48,14 +48,14 @@ optional arguments:
   -o OUTPUTFILE, --outputfile OUTPUTFILE
                         Output file.
   --minlength MINLENGTH
-                        Primer minimum length.
+                        Primer minimum length. [Default:20]
   --maxlength MAXLENGTH
-                        Primer maximum length.
-  --mintm MINTM         Primer minimum TM.
-  --maxtm MAXTM         Primer maximum TM.
+                        Primer maximum length. [Default:25]
+  --mintm MINTM         Primer minimum TM. [Default:50]
+  --maxtm MAXTM         Primer maximum TM. [Default:60]
   -m MAXNUM, --maxnum MAXNUM
                         Maximum primer pairs for one CpG island. [Default:3]
-  --tmdiff TMDIFF       Maximum TM difference in primer pairs.
+  --tmdiff TMDIFF       Maximum TM difference in primer pairs. [Default:5]
 
 usage B: MethyScan.py formatdb [-h] -g GENOMEFILE [-o OUTPUTFILE] [-t THREADS]
 
@@ -79,7 +79,7 @@ optional arguments:
   -d DATABASE, --database DATABASE
                         Methylated database filename prefix.
   -c MISMATCH, --mismatch MISMATCH
-                        Maximum mismatch in one primer sequence, (<=3).
+                        Maximum mismatch in one primer sequence, (<=3). [Default:3]
   --minlength MINLENGTH
                         Minimum amplicon length considered in mapping. [default:100]
   --maxlength MAXLENGTH
