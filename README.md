@@ -102,3 +102,7 @@ optional arguments:
 
 3. Search primer pairs against methylated genome sequences.
    python3 MethyScan.py searchdb -i mytest.txt -d mydb -t 10 -o primer_res.txt -k ALL
+   
+If you use MethyScan for your research, please kindly cite the following paper:
+曹英豪.MethyScan：一种甲基化特异性PCR引物设计及评估工具[J].生物化学与生物物理进展,2021,48(06):677-687.
+CAO Ying-Hao.MethyScan：A Tool for Methylation Specific PCR Primer Design and Evaluation[J].Progress in Biochemistry and Biophysics,2021,48(06):677-687.
