@@ -109,4 +109,5 @@ optional arguments:
 If you use MethyScan for your research, please kindly cite the following paper:
 
 曹英豪.MethyScan：一种甲基化特异性PCR引物设计及评估工具[J].生物化学与生物物理进展,2021,48(06):677-687.
-CAO Ying-Hao.MethyScan[https://doi.org/10.16476/j.pibb.2020.0413]：A Tool for Methylation Specific PCR Primer Design and Evaluation[J].Progress in Biochemistry and Biophysics,2021,48(06):677-687.
+CAO Ying-Hao.MethyScan：A Tool for Methylation Specific PCR Primer Design and Evaluation[J].Progress in Biochemistry and Biophysics,2021,48(06):677-687. 
+doi:[https://doi.org/10.16476/j.pibb.2020.0413](https://doi.org/10.3389/fgene.2020.00490)
