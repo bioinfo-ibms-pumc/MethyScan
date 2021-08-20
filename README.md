@@ -104,7 +104,7 @@ optional arguments:
    python3 MethyScan.py searchdb -i mytest.txt -d mydb -t 10 -o primer_res.txt -k ALL
   
 ```
-## Citing
+
 
 If you use MethyScan for your research, please kindly cite the following paper:
 
